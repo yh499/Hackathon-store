@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+        <title>store</title>
+        {%load static%}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'store/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> 
+    </head>
+    <body><h1>Screen Saver</h1>
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <img width= "70px" src="{% static 'store/images/ScreenSavers.png' %}" alt="logo.png"/><a class="navbar-brand" href="#"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <!-- /*product.id = iphone product.id */  -->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="product/iphone6">iPhone 6 </a></li>
+                <li><a href="product/iphone6plus">iPhone6 Plus</a></li>
+                <li><a href="product/iphone6s">iPhone 6s</a></li>
+                <li><a href="product/iphone6splus">iPhone 6sPlus</a></li>
+                <li><a href="product/iphone7">iPhone 7</a></li>
+                <li><a href="product/iphone7plus">iPhone7 Plus</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+           <footer class="footer">
+            <div class="container">
+                <ul class="social-icon animate pull-right">
+                    <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li> <!-- change the link to social page and edit title-->
+                    <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    </body>
+</html>

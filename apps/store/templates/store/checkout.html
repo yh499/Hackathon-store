@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>store</title>
+    {%load static%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'store/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">iPhone Screen</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!-- /*product.id = iphone product.id */  -->
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="product/iphone6">iPhone 6 </a></li>
+            <li><a href="product/iphone6plus">iPhone6 Plus</a></li>
+            <li><a href="product/iphone6s">iPhone 6s</a></li>
+            <li><a href="product/iphone6splus">iPhone 6sPlus</a></li>
+            <li><a href="product/iphone7">iPhone 7</a></li>
+            <li><a href="product/iphone7plus">iPhone7 Plus</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+        <div class="container">
+        <div class="row">
+           <div class="col-xs-4 item-photo">
+                <img width= "40%" src="{% static 'store/images/iphone6s.jpeg' %}" alt="6s.png"/>
+            </div>
+            <div class="col-xs-5" style="border:0px solid gray">
+                <h3>Checkout</h3>
+                
+                <!-- Datos del vendedor y titulo del producto -->
+                <h4>iPhone 6s Screen</h4>    
+                <h5 style="color:#337ab7"> <a href="#">Coding Dojo</a> · <small style="color:#337ab7">(8000 reviews)</small></h5>
+                <h4>quantity: {{request.session.quantity}} </h4>
+                <h4>Amount: ${{ request.session.total_price }}</h4>
+                <!-- Precios -->
+                <h6 class="title-price"></h6>
+                
+    
+                <!-- Detalles especificos del producto -->
+                <div class="section">                   
+                    <div>
+                        <div class="attr" style="width:25px;background:#5a5a5a;"></div>
+                        <div class="attr" style="width:25px;background:white;"></div>
+                    </div>
+                </div>  
+                <form action='/result' method='post'>
+                    {% csrf_token %}
+                    
+                    <input type='hidden' name='product' value='1' />
+                    <input type='submit' value='Confirm' >
+                    <a href="/product/iphone6s">Go Back</a>
+                </form>              
+
+                                                        
+            </div>                              
+    
+    
+        </div>
+    </div>        
+
+    <!----------- Footer ------------>
+
+
+</div>
+
+</body>
+</html>
